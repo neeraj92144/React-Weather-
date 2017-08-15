@@ -2,7 +2,7 @@ import React from 'react';
 var Examples = (props) =>{
   return(
       <div>
-         Examples
+         Examples!
       </div>
   )
 }
