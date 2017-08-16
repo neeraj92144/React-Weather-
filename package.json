@@ -4,7 +4,7 @@
   "description": "Initial root app",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js --progress --colors -w"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Neeraj",
