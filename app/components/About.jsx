@@ -2,7 +2,8 @@ import React from 'react';
 var About = (props) => {
   return(
       <div>
-          About Component Ok Ok!
+          <h1> About Component! </h1>
+          <p>Welcome to about page</p>
       </div>
   )
 }
