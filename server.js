@@ -7,18 +7,11 @@ var app=express();
 const POST= process.env.PORT || 2017;
 
 app.use( function(req,res,next){
-  // console.log('HTTPS/HTTP',req.headers['x-forwarded-proto']);
-  // console.log('HOSTNAMEW',req.hostname)
-  // console.log('Url-->',req.url);
-  if(req.headers['x-forwarded-proto'] === 'http'){
-    next();
-  }else if(req.headers['x-forwarded-proto'] === undefined){
-    console.log('INSide UNdeni');
-    next();
+  if(req.headers['x-forwarded-proto'] === 'https'){
+      res.redirect('http://'+req.hostname+req.url);
   }
   else{
-    console.log('else');
-    res.redirect('http://'+req.hostname+req.url);
+    next();
   }
 });
 
